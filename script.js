@@ -4,5 +4,8 @@ const allColor = document.querySelector('#colorSelect');
 const btn = document.querySelector('input');
 
 btn.addEventListener('click', () => {
-	allColor.remove([0]);
+	const currentValue = allColor.selectedIndex;
+	if (currentValue != -1) {
+		allColor.remove(currentValue)
+	}
 });
